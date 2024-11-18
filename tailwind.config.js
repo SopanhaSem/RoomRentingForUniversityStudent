@@ -3,7 +3,31 @@ const flowbite = require("flowbite-react/tailwind");
 export default {
   content: ["./index.html", "./src/**/*.{js,ts,jsx,tsx}", flowbite.content()],
   theme: {
-    extend: {},
+    extend: {
+      colors: {
+        primary: "#1d4ed8",
+        secondary: "#9333ea",
+        accent: "#10b981",
+        background: "#ffffff",
+        text: "#111827",
+      },
+      fontFamily: {
+        sans: ["Faculty Glyphic", "Faculty Glyphic"],
+        heading: ["Faculty Glyphic", "Faculty Glyphic"],
+      },
+      spacing: {
+        18: "4.5rem",
+        36: "9rem",
+      },
+      screens: {
+        xs: "480px",
+        sm: "640px",
+        md: "768px",
+        lg: "1024px",
+        xl: "1280px",
+        "2xl": "1536px",
+      },
+    },
   },
   plugins: [flowbite.plugin()],
 };
