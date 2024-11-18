@@ -1,4 +1,3 @@
-// src/components/dashboard/dashboardmenu/AdvancedSearch.jsx
 import React, { useState } from "react";
 
 const AdvancedSearch = () => {
@@ -8,7 +7,6 @@ const AdvancedSearch = () => {
   const [distance, setDistance] = useState(10);
 
   const handleSearch = () => {
-    // Trigger search logic here
     console.log("Searching with", { location, roomType, priceRange, distance });
   };
 

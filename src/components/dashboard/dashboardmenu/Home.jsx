@@ -1,7 +1,5 @@
 import React, { useState, useEffect } from "react";
 import { useNavigate } from "react-router-dom";
-
-// Dummy data for rooms with categories
 const rooms = [
   {
     id: 1,
@@ -27,35 +25,30 @@ const rooms = [
     description:
       "A luxurious room with all the modern amenities, including air conditioning and a king-sized bed.",
     isStudentDiscountAvailable: false,
-    distanceFromUniversity: 3, // in km
+    distanceFromUniversity: 3, 
   },
-  // More rooms...
 ];
 
 const Home = () => {
   const [showTop10, setShowTop10] = useState(true);
-  const [filteredRooms, setFilteredRooms] = useState(rooms); // Stores filtered rooms
+  const [filteredRooms, setFilteredRooms] = useState(rooms); 
   const [selectedCategory, setSelectedCategory] = useState("All");
   const [selectedPriceRange, setSelectedPriceRange] = useState("All");
   const [showStudentDiscount, setShowStudentDiscount] = useState(false);
   const [searchQuery, setSearchQuery] = useState("");
-  const [selectedLocation, setSelectedLocation] = useState(""); // Location for filtering by distance
-  const [maxDistance, setMaxDistance] = useState(5); // Default to filter rooms within 5 km
+  const [selectedLocation, setSelectedLocation] = useState("");
+  const [maxDistance, setMaxDistance] = useState(5); 
   const navigate = useNavigate();
 
-  // Sort rooms by most rented
   const top10Rooms = rooms.sort((a, b) => b.rented - a.rented).slice(0, 10);
 
-  // Filter rooms based on selected filters
   const filterRooms = () => {
     let updatedRooms = rooms;
 
-    // Filter by category
     if (selectedCategory !== "All") {
       updatedRooms = updatedRooms.filter((room) => room.category === selectedCategory);
     }
 
-    // Filter by price range
     if (selectedPriceRange !== "All") {
       const [minPrice, maxPrice] = selectedPriceRange.split("-").map(Number);
       updatedRooms = updatedRooms.filter(
@@ -65,19 +58,17 @@ const Home = () => {
       );
     }
 
-    // Filter by student discount
     if (showStudentDiscount) {
       updatedRooms = updatedRooms.filter((room) => room.isStudentDiscountAvailable);
     }
 
-    // Filter by search query
+
     if (searchQuery) {
       updatedRooms = updatedRooms.filter((room) =>
         room.name.toLowerCase().includes(searchQuery.toLowerCase())
       );
     }
 
-    // Filter by location (distance from university)
     if (selectedLocation && maxDistance) {
       updatedRooms = updatedRooms.filter(
         (room) => room.distanceFromUniversity <= maxDistance
@@ -87,17 +78,16 @@ const Home = () => {
     setFilteredRooms(updatedRooms);
   };
 
-  // Navigate to RoomDetail page on room click
   const handleRoomClick = (roomId) => {
     navigate(`/dashboard/home/${roomId}`);
   };
 
-  // Close the Top 10 rooms popup
+
   const closeTop10Popup = () => {
     setShowTop10(false);
   };
 
-  // Call filterRooms whenever a filter or search query changes
+
   useEffect(() => {
     filterRooms();
   }, [

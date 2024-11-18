@@ -1,8 +1,8 @@
-import React, { useState } from 'react';
+import React, { useState } from "react";
 
 const VerifyOtp = () => {
-  const [otp, setOtp] = useState(['', '', '', '']);
-  const [errorMessage, setErrorMessage] = useState('');
+  const [otp, setOtp] = useState(["", "", "", ""]);
+  const [errorMessage, setErrorMessage] = useState("");
 
   const handleChange = (e, index) => {
     const newOtp = [...otp];
@@ -12,14 +12,14 @@ const VerifyOtp = () => {
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    const otpValue = otp.join('');
+    const otpValue = otp.join("");
     if (otpValue.length < 4) {
-      setErrorMessage('Please enter a valid 4-digit OTP.');
+      setErrorMessage("Please enter a valid 4-digit OTP.");
       return;
     }
-    // Handle OTP verification logic here (API call, etc.)
-    alert('OTP Verified Successfully!');
-    setErrorMessage('');
+
+    alert("OTP Verified Successfully!");
+    setErrorMessage("");
   };
 
   return (
@@ -59,10 +59,8 @@ const VerifyOtp = () => {
         </form>
 
         <p className="mt-6 text-center text-gray-600">
-          Didn’t receive the code?{' '}
-          <button className="text-teal-500 hover:underline">
-            Resend OTP
-          </button>
+          Didn’t receive the code?{" "}
+          <button className="text-teal-500 hover:underline">Resend OTP</button>
         </p>
       </div>
     </div>

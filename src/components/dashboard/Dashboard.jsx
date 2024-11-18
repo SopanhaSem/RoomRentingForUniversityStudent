@@ -12,8 +12,6 @@ export function Dashboard() {
   const navigate = useNavigate();
 
   const handleLogout = () => {
-    // Perform any logout logic here (e.g., clearing authentication tokens, user data)
-    // For now, we'll just redirect to the signin page
     navigate("/signin");
   };
 

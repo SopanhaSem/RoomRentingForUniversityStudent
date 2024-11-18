@@ -1,20 +1,20 @@
-import React, { useState } from 'react';
+import React, { useState } from "react";
 
 const SignInForm = () => {
-  const [email, setEmail] = useState('');
-  const [password, setPassword] = useState('');
-  const [errorMessage, setErrorMessage] = useState('');
+  const [email, setEmail] = useState("");
+  const [password, setPassword] = useState("");
+  const [errorMessage, setErrorMessage] = useState("");
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    // Basic validation (you can customize this later)
+
     if (!email || !password) {
-      setErrorMessage('Please fill in all fields');
+      setErrorMessage("Please fill in all fields");
       return;
     }
-    // Handle login logic here (API call, etc.)
-    setErrorMessage('');
-    alert('Form submitted!');
+
+    setErrorMessage("");
+    alert("Form submitted!");
   };
 
   return (
@@ -32,7 +32,10 @@ const SignInForm = () => {
 
         <form onSubmit={handleSubmit}>
           <div className="mb-6">
-            <label htmlFor="email" className="block text-gray-700 font-medium mb-2">
+            <label
+              htmlFor="email"
+              className="block text-gray-700 font-medium mb-2"
+            >
               Email Address
             </label>
             <input
@@ -47,7 +50,10 @@ const SignInForm = () => {
           </div>
 
           <div className="mb-6">
-            <label htmlFor="password" className="block text-gray-700 font-medium mb-2">
+            <label
+              htmlFor="password"
+              className="block text-gray-700 font-medium mb-2"
+            >
               Password
             </label>
             <input
@@ -82,7 +88,7 @@ const SignInForm = () => {
         </form>
 
         <p className="mt-6 text-center text-gray-600">
-          Don't have an account?{' '}
+          Don't have an account?{" "}
           <a href="signup" className="text-blue-500 hover:underline">
             Sign Up
           </a>

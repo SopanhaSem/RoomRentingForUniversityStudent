@@ -1,4 +1,4 @@
-// src/components/dashboard/dashboardmenu/MonthlyReport.jsx
+
 
 import React from "react";
 import { Bar } from "react-chartjs-2";
@@ -21,7 +21,7 @@ ChartJS.register(
   Legend
 );
 
-// Sample data for the report
+
 const monthlyData = {
   labels: [
     "January",
@@ -40,7 +40,7 @@ const monthlyData = {
   datasets: [
     {
       label: "Total Rent Collected",
-      data: [400, 520, 600, 710, 450, 500, 700, 650, 630, 590, 680, 750], // Sample data
+      data: [400, 520, 600, 710, 450, 500, 700, 650, 630, 590, 680, 750], 
       backgroundColor: "rgba(54, 162, 235, 0.7)",
     },
   ],
@@ -50,7 +50,7 @@ const topRooms = [
   { room: "Studio Apartment", rentals: 15, revenue: "$7500" },
   { room: "1-Bedroom", rentals: 10, revenue: "$5000" },
   { room: "2-Bedroom Suite", rentals: 8, revenue: "$4800" },
-  // Add more entries as needed
+  
 ];
 
 const MonthlyReport = () => {

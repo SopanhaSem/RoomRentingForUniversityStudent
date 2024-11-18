@@ -1,29 +1,27 @@
-import React, { useState } from 'react';
+import React, { useState } from "react";
 
 const SignUpForm = () => {
-  const [fullName, setFullName] = useState('');
-  const [email, setEmail] = useState('');
-  const [password, setPassword] = useState('');
-  const [confirmPassword, setConfirmPassword] = useState('');
-  const [errorMessage, setErrorMessage] = useState('');
+  const [fullName, setFullName] = useState("");
+  const [email, setEmail] = useState("");
+  const [password, setPassword] = useState("");
+  const [confirmPassword, setConfirmPassword] = useState("");
+  const [errorMessage, setErrorMessage] = useState("");
 
   const handleSubmit = (e) => {
     e.preventDefault();
 
-    // Basic validation
     if (!fullName || !email || !password || !confirmPassword) {
-      setErrorMessage('Please fill in all fields');
+      setErrorMessage("Please fill in all fields");
       return;
     }
 
     if (password !== confirmPassword) {
-      setErrorMessage('Passwords do not match');
+      setErrorMessage("Passwords do not match");
       return;
     }
 
-    // Handle signup logic here (API call, etc.)
-    setErrorMessage('');
-    alert('Form submitted successfully!');
+    setErrorMessage("");
+    alert("Form submitted successfully!");
   };
 
   return (
@@ -41,7 +39,10 @@ const SignUpForm = () => {
 
         <form onSubmit={handleSubmit}>
           <div className="mb-6">
-            <label htmlFor="fullName" className="block text-gray-700 font-medium mb-2">
+            <label
+              htmlFor="fullName"
+              className="block text-gray-700 font-medium mb-2"
+            >
               Full Name
             </label>
             <input
@@ -56,7 +57,10 @@ const SignUpForm = () => {
           </div>
 
           <div className="mb-6">
-            <label htmlFor="email" className="block text-gray-700 font-medium mb-2">
+            <label
+              htmlFor="email"
+              className="block text-gray-700 font-medium mb-2"
+            >
               Email Address
             </label>
             <input
@@ -71,7 +75,10 @@ const SignUpForm = () => {
           </div>
 
           <div className="mb-6">
-            <label htmlFor="password" className="block text-gray-700 font-medium mb-2">
+            <label
+              htmlFor="password"
+              className="block text-gray-700 font-medium mb-2"
+            >
               Password
             </label>
             <input
@@ -86,7 +93,10 @@ const SignUpForm = () => {
           </div>
 
           <div className="mb-6">
-            <label htmlFor="confirmPassword" className="block text-gray-700 font-medium mb-2">
+            <label
+              htmlFor="confirmPassword"
+              className="block text-gray-700 font-medium mb-2"
+            >
               Confirm Password
             </label>
             <input
@@ -118,7 +128,7 @@ const SignUpForm = () => {
         </form>
 
         <p className="mt-6 text-center text-gray-600">
-          Already have an account?{' '}
+          Already have an account?{" "}
           <a href="signin" className="text-indigo-500 hover:underline">
             Sign In
           </a>
