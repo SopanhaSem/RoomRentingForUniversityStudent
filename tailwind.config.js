@@ -12,8 +12,8 @@ export default {
         text: "#111827",
       },
       fontFamily: {
-        sans: ["Faculty Glyphic", "Faculty Glyphic"],
-        heading: ["Faculty Glyphic", "Faculty Glyphic"],
+        sans: ["Bokor", "Playfair Display", "sans-serif"],
+        heading: ["PT Sans", "Bokor", "serif"], 
       },
       spacing: {
         18: "4.5rem",

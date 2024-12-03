@@ -1,0 +1,30 @@
+{
+  "english": {
+    "Title": "ROOM RENTING DASHBOARD",
+    "Description": "Explore your Room",
+    "RoomType": "Room Type",
+    "PriceRange": "Price Range",
+    "StudentDiscount": "Student Discount",
+    "ChooseyourLocation": "Choose your Location",
+    "Search": "Search",
+    "All": "All",
+    "Standard": "Standard",
+    "Deluxe": "Deluxe",
+    "MaxDistance": "Max Distance",
+    "AvailableRooms": "Available Rooms"
+  },
+  "khmer": {
+    "Title": "ផ្ទាំងគ្រប់គ្រងការជួលបន្ទប់",
+    "Description": "រកមើលបន្ទប់ដែលមាន គ្រប់គ្រងការជួល និងច្រើនទៀត!",
+    "RoomType": "ប្រភេទបន្ទប់",
+    "PriceRange": "ជួរតម្លៃ",
+    "StudentDiscount": "ការបញ្ចុះតម្លៃសិស្ស",
+    "ChooseyourLocation": "ជ្រើសរើសទីតាំងរបស់អ្នក",
+    "Search": "ស្វែងរក",
+    "All": "ទាំងអស់",
+    "Standard": "ស្ដង់ដារ",
+    "Deluxe": "ពិសេស",
+    "MaxDistance": "ចម្ងាយអតិបរមា",
+    "AvailableRooms": "បន្ទប់ដែលមាន"
+  }
+}

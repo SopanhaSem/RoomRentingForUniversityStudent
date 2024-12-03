@@ -18,10 +18,10 @@ const SignInForm = () => {
   };
 
   return (
-    <div className="min-h-screen bg-gradient-to-r from-indigo-500 to-pink-500 flex justify-center items-center">
-      <div className="bg-white p-8 rounded-lg shadow-xl max-w-sm w-full transform transition-all duration-500 hover:scale-105">
+    <div className="min-h-screen bg-[url('https://www.anitahendrieka.com/wp-content/uploads/2023/03/paul-szewczyk-VoLyNETLCSU-unsplash.jpg')] bg-cover bg-center bg-no-repeat flex justify-center items-center">
+      <div className="bg-white/70 backdrop-blur-md p-8 rounded-lg shadow-xl max-w-sm w-full">
         <h2 className="text-3xl font-semibold text-center text-gray-800 mb-8">
-          Welcome Back!
+          Welcome!
         </h2>
 
         {errorMessage && (
